@@ -134,6 +134,4 @@
 - **警报误触发**：调整红外对射传感器位置，避免阳光直射，可增加遮挡外壳
 ### 更新栏目
 ##### 更新一：增加了报警声音提示
-   可以使用[Python](https://python.org)先安装Python。
-   使用python conv.py <string>运行。<string>表示一个中文字符串
-   在Arduino代码中使用串口打印值就可以了。 
+   使用Arduino头文件代替Python代码，既不用安装环境，也可以直接在Arduino代码里调用，非常方便。
