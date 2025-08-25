@@ -17,7 +17,7 @@ Adafruit_NeoPixel strip(NUMPIXELS, WS2812_PIN, NEO_GRB + NEO_KHZ800);
 Servo ser;
 void setup() {
   pinMode(soundSensorPin, INPUT); // 声音传感器
-  pinMode(waterSenserPin, INPUT); // 雨滴传感器
+  pinMode(watersensorPin, INPUT); // 雨滴传感器
   pinMode(lightSensorPin, INPUT); // 光敏电阻
   pinMode(motionSensorPin, INPUT_PULLUP); // ！必须上拉！
   pinMode(redLightPin, OUTPUT); // 红色的LED灯，模拟房屋前大灯
@@ -108,10 +108,10 @@ void controll_motion() {
   display.println(String("Alarm:") + String(motionAlert ? "T" : "F"));
 }
 void controll_servo(){
-  if (digitalRead(waterSenserPin) && servoStatus != 0) {
+  if (digitalRead(watersensorPin) && servoStatus != 0) {
     servoStatus = 0;
     ser.write(90); // 设置角度为90
-  } else if (!digitalRead(waterSenserPin) && servoStatus == 0){
+  } else if (!digitalRead(watersensorPin) && servoStatus == 0){
     servoStatus = 1;
     ser.write(0);  // 设置角度为0                    
     Serial.print("\xc1\xc0\xd2\xc2\xbc\xdc\xca\xd5\xbb\xd8");
