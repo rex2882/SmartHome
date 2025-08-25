@@ -13,4 +13,4 @@
 #define buzzerPin 5           // 蜂鸣器
 #define relayPin 11           // 继电器控制引脚(低电平有效)
 #define servoControlPin 8     // 伺服电机控制引脚
-#define waterSenserPin 9      // 雨滴传感器
+#define waterSensorPin 9      // 雨滴传感器
